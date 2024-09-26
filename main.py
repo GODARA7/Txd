@@ -358,7 +358,7 @@ async def account_login(bot: Client, m: Message):
     input7: Message = await bot.listen(editable.chat.id)
     authkey = input7.text
     await input7.delete(True)
-    await x.delete()
+    
 
     await editable.edit("**Enter Batch Name or send d for grabbing from text filename.**")
     input1: Message = await bot.listen(editable.chat.id)
