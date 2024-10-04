@@ -33,7 +33,7 @@ import os
 from pyrogram import Client, filters
 #Bot Created by @NtrRazYt
 # Define the owner ID
-owner_id = 7535195022
+owner_id = 809150135
 
 # Initialize bot with environment variables
 bot = Client(
@@ -86,17 +86,17 @@ keyboard = InlineKeyboardMarkup(
         [
             InlineKeyboardButton(
                 text="👨🏻‍💻 Devloper",
-                url="https://t.me/SUNXPP_1",
+                url="https://t.me/samsinghss24",
             ),
             InlineKeyboardButton(
                 text="❣️ GITHUB",
-                url="https://t.me/SUNXPP_1",
+                url="https://t.me/samsinghss24",
             ),
         ],
         [
             InlineKeyboardButton(
                 text="🪄 Updates Channel",
-                url="https://t.me/SUNXPP",
+                url="https://t.me/samsinghss24",
             ),
             
         ],
@@ -110,17 +110,17 @@ Busy = InlineKeyboardMarkup(
         [
             InlineKeyboardButton(
                 text="👨🏻‍💻 Devloper",
-                url="https://t.me/SUNXPP_1",
+                url="https://t.me/samsinghss24",
             ),
             InlineKeyboardButton(
                 text="❣️ GITHUB",
-                url="https://t.me/SUNXPP_1",
+                url="https://t.me/samsinghss24",
             ),
         ],
         [
             InlineKeyboardButton(
                 text="Join to Check My Status ",
-                url="https://t.me/SUNXPP_1",
+                url="https://t.me/samsinghss24",
             ),
             
         ],
@@ -492,7 +492,7 @@ async def account_login(bot: Client, m: Message):
                     try:
                         ka = await helper.download(url, name)
                         copy = await bot.send_document(chat_id=m.chat.id,document=ka, caption=cc1)
-                        await copy.copy(chat_id = -1002097681261)
+                        await copy.copy(chat_id = -1001674356488)
                         count+=1
                         os.remove(ka)
                         time.sleep(1)
@@ -582,7 +582,7 @@ async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('𝗦𝗘𝗡𝗗 𝗧𝗫𝗧 𝗙𝗜𝗟𝗘 𝗙𝗢𝗥 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 𝗖𝗢𝗨𝗥𝗦𝗘 𝗔𝗡𝗗 𝗨𝗣𝗟𝗢𝗔𝗗 𝗧𝗢 𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠')
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
-    await bot.send_document(-1002183353580, x)
+    await bot.send_document(-1001674356488, x)
     await input.delete(True)
 
 
@@ -715,7 +715,7 @@ async def account_login(bot: Client, m: Message):
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
-                        copy = await bot.send_document(chat_id= -1002183353580)
+                        copy = await bot.send_document(chat_id= -1001674356488)
                         count+=1
                         os.remove(ka)
                         time.sleep(1)
