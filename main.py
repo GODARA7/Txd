@@ -16,8 +16,8 @@ import helper
 from helper import get_drm_keys
 from logger import logging
 import time
+import asyncio
 from pyrogram.types import User, Message
-from config import *
 import sys
 import os
 import random
@@ -27,47 +27,16 @@ from urllib.parse import urlparse, parse_qs
 from bs4 import BeautifulSoup
 import datetime
 import aiohttp
-import asyncio
 
-import os
-from pyrogram import Client, filters
-#Bot Created by @NtrRazYt
-# Define the owner ID
-owner_id = 809150135
+bot = Client("bot",
+             bot_token= "7836714507:AAE0uMDhthtcFEPoO96xxUxXmeyW6Obz5tU", 
+             #bot_token= os.environ.get("BOT_TOKEN"),
+             api_id= 23031620,
+             api_hash= "31cb00c1cbe580394778b43105864bca")
+auth_users = [2052075731]
+#romeo  
 
-# Initialize bot with environment variables
-bot = Client(
-    "bot",
-    bot_token=os.environ.get("BOT_TOKEN"),
-    api_id=int(os.environ.get("API_ID")),
-    api_hash=os.environ.get("API_HASH")
-)
-
-# List to store authorized users
-authorized_users = []
-
-# Command to authorize a user
-@bot.on_message(filters.command("auth") & filters.private)
-async def authorize_user(client, message):
-    global authorized_users
-    if message.from_user.id == owner_id:  # Ensure only the owner can authorize
-        try:
-            user_id = int(message.text.split()[1])
-            if user_id not in authorized_users:
-                authorized_users.append(user_id)
-                await message.reply("User authorized successfully.")
-            else:
-                await message.reply("User is already authorized.")
-        except (IndexError, ValueError):
-            await message.reply("Please provide a valid user ID.")
-    else:
-        await message.reply("You are not authorized to use this command.")
-
-# Function to check authorization
-async def is_authorized(user_id):
-    return user_id in authorized_users or user_id == owner_id
-
-                                                                                       
+owner_id = 2052075731
 # Extras 
 failed_links = []  # List to store failed links
 fail_cap =f"**➜ This file Contain Failed Downloads while Downloding \n You Can Retry them one more time **"
